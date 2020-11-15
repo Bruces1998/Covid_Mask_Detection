@@ -16,9 +16,9 @@ args = vars(ap.parse_args())
 
 
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-model = load_model('without_aug_mobilenet_mask_model.hdf5')
+model = load_model('output/best.hdf5')
 if not args.get("video", False):
-    camera = cv2.VideoCapture(1)
+    camera = cv2.VideoCapture(2)
 
     # otherwise, load the video
 else:
